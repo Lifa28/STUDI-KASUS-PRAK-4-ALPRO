@@ -16,12 +16,10 @@ class Andi {
 	int i;
 	int bulan;
 	
-	//void ga pake return. 
-	//int pake return.		
 }p;
 
 istream& operator>>(istream&n, Andi&var){
-	cout<<"masukkan berapa banyak bulan";
+	cout<<"Masukkan Berapa Jumlah Bulan : ";
 	n>>var.bulan;
 	 for (var.i=1; var.i<=var.bulan; var.i++){
 		cout<<"Jumlah uang saku bulan ke "<<var.i<<": ";
@@ -32,6 +30,7 @@ istream& operator>>(istream&n, Andi&var){
 		n>>var.jajan[var.i];
 		cout<<"======================================="<<endl;
 	 }
+  return n;
 }
 
 void Andi::proses(){
@@ -48,7 +47,8 @@ ostream& operator<<(ostream&o, Andi&var){
 	cout<<"Total pengeluaran tiap bulan ke "<<var.i<<" : "<<var.pengeluaran_tiap_bln[var.i]<<endl;
 	cout<<"Total Uang tabungan : "<<var.uang_tabungan[var.i]<<endl;
 	}
-	cout<<"Total Pengeluaran Selama 2 bulan : "<<var.totalpengeluaran<<endl;
-}
+	cout<<"Total Pengeluaran Selama "<<var.bulan<<" bulan : "<<var.totalpengeluaran<<endl;
 
+  return o;
+}
 
